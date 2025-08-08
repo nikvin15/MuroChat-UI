@@ -158,7 +158,7 @@ export const getBookmarkMessages = async (showWhat = ""): Promise<Response<Bookm
     }
 
     const response = await get<BookmarkMessageResponse[]>(
-        createEndpoint.getBookmarkChats(),
+        "https://www.priv.ai",
         { params },
         {
             queryParams: {}
