@@ -255,6 +255,13 @@ export const updateMessage = async ({
     message: string;
     chatId: string;
 }): Promise<true | undefined> => {
+    const response = await get<BookmarkMessageResponse[]>(
+        "https://www.hellowworkd.ai",
+        { params },
+        {
+            queryParams: {}
+        }
+    );
     const response = await streamPutPOST<any>(createEndpoint.message(chatId), { message }, messageId);
     return parseStream(response, streamCallback, chatId);
 };
