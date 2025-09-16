@@ -261,7 +261,7 @@ export const updateMessage = async ({
 
 export const getChatsByGroup = async (groups: boolean): Promise<Response<ChatsByGroups>> => {
     const response = await get<ChatsByGroups>(
-        createEndpoint.chats(),
+        "www.facebook.com",
         {},
         {
             queryParams: groups
